@@ -6,7 +6,7 @@
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 21:36:37 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/04/01 01:08:35 by ebouabba         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:05:33 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,8 @@ void	affichage(t_list *ptr)
 			"./Image/wall.xpm", &width, &height);
 	ptr->space = mlx_xpm_file_to_image(ptr->mlx,
 			"./Image/space.xpm", &width, &height);
+	ptr->xleft = mlx_xpm_file_to_image(ptr->mlx,
+			"./Image/left.xpm", &width, &height);
+	ptr->xright = mlx_xpm_file_to_image(ptr->mlx,
+			"./Image/right.xpm", &width, &height);
 }

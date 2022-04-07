@@ -6,7 +6,7 @@
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 12:32:25 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/04/01 01:09:05 by ebouabba         ###   ########.fr       */
+/*   Updated: 2022/03/31 22:24:24 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static	char	*ft_substrr(char const *s, int start, int len)
 	return (str);
 }
 
-static	int	ft_nbr_tab(char const *s, char c)
+static int	ft_nbr_tab(char const *s, char c)
 {
 	int	i;
 	int	count;

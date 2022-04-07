@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/27 15:07:00 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/03/31 22:43:47 by ebouabba         ###   ########.fr       */
+/*   Created: 2021/11/27 15:05:52 by ebouabba          #+#    #+#             */
+/*   Updated: 2022/03/27 14:56:58 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
-
-# include <stdio.h>
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 # include <stdlib.h>
-# include <stddef.h>
 # include <unistd.h>
+# include <stddef.h>
 
-void	print(char *name);
-void	ft_putstr_fd(char *s, int fd);
-char	**ft_split(char const *s, char c);
-int		ft_strncmp(char *s1, char *s2, int n);
-void	ft_putnbr_fd(int n, int fd);
+# define BUFFER_SIZE 1024
+
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *var_static, char *var);
+char	*ft_substr(char *s, int start, int len);
+int		ft_strlen(const char *s);
+char	*ft_get_line(char *var_static);
+char	*ft_readfile(char *var_static, int fd);
+int		ft_backslash(char *s);
+char	*ft_strdup(const char *s1);
 
 #endif

@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_error.c                                   :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 12:12:41 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/03/27 15:47:47 by ebouabba         ###   ########.fr       */
+/*   Created: 2022/03/27 15:07:00 by ebouabba          #+#    #+#             */
+/*   Updated: 2022/04/01 01:07:10 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#ifndef UTILS_H
+# define UTILS_H
 
-void	print_error(char *name)
-{
-	ft_putstr_fd(name, 2);
-	exit(1);
-}
+# include <stdio.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+
+void	print(char *name);
+void	ft_putstr_fd(char *s, int fd);
+char	**ft_split(char const *s, char c);
+int		ft_strncmp(char *s1, char *s2, int n);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
+#endif

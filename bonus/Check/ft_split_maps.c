@@ -6,7 +6,7 @@
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 15:57:28 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/04/01 01:07:45 by ebouabba         ###   ########.fr       */
+/*   Updated: 2022/04/01 00:58:45 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,8 @@ void	ft_split_maps(t_list *ptr)
 		print("Error\nInvalid Map!");
 	ptr->maps = ft_strjoin(ptr->maps, ptr->map);
 	free(ptr->map);
-	while (1)
-	{
-		ptr->map = get_next_line(fd);
+	while (ptr->map == get_next_line(fd))
+	{	
 		if (!ptr->map)
 		{
 			free(ptr->map);

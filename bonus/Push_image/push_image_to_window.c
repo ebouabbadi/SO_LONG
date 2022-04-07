@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_exit_window.c                                   :+:      :+:    :+:   */
+/*   push_image_to_window.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 18:51:53 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/03/30 20:24:35 by ebouabba         ###   ########.fr       */
+/*   Created: 2022/03/28 11:12:29 by ebouabba          #+#    #+#             */
+/*   Updated: 2022/03/31 21:17:31 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	ft_exit(t_list *ptr)
+void	push_image_to_window(t_list *ptr)
 {
-	mlx_destroy_window(ptr->mlx, ptr->window);
-	ft_putstr_fd("<-------!!------->\n", 1);
-	exit(0);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	affichage(ptr);
+	while (ptr->tab[i])
+	{
+		j = 0;
+		while (ptr->tab[i][j])
+		{
+			put_image(ptr->tab[i][j], ptr, i, j);
+			j++;
+		}
+		i++;
+	}
+	ft_putstr_fd("<-----So_long---->\n", 1);
 }

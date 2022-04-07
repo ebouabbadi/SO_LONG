@@ -6,7 +6,7 @@
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 14:07:19 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/04/01 00:51:44 by ebouabba         ###   ########.fr       */
+/*   Updated: 2022/04/01 00:41:35 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct t_list
 	int		e;
 	int		p;
 	int		c;
+	int		z;
 	char	**argv;
 	int		i;
 	int		y;
@@ -42,6 +43,8 @@ typedef struct t_list
 	char	*exit;
 	char	*space;
 	char	*wall;
+	char	*xleft;
+	char	*xright;
 }t_list;
 
 void	ft_split_maps(t_list *ptr);
@@ -60,5 +63,6 @@ void	key_code_1(t_list *ptr);
 void	key_code_2(t_list *ptr);
 void	key_code_13(t_list *ptr);
 int		ft_exit(t_list *ptr);
+int		ft_animation(t_list *ptr);
 
 #endif

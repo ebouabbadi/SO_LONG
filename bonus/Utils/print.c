@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_exit_window.c                                   :+:      :+:    :+:   */
+/*   ft_print_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 18:51:53 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/03/30 20:24:35 by ebouabba         ###   ########.fr       */
+/*   Created: 2022/03/23 12:12:41 by ebouabba          #+#    #+#             */
+/*   Updated: 2022/03/31 22:34:34 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "utils.h"
 
-int	ft_exit(t_list *ptr)
+void	print(char *name)
 {
-	mlx_destroy_window(ptr->mlx, ptr->window);
-	ft_putstr_fd("<-------!!------->\n", 1);
-	exit(0);
-	return (0);
+	ft_putstr_fd(name, 2);
+	exit(1);
 }

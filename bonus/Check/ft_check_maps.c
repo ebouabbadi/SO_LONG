@@ -6,7 +6,7 @@
 /*   By: ebouabba <ebouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 15:39:42 by ebouabba          #+#    #+#             */
-/*   Updated: 2022/03/31 22:44:06 by ebouabba         ###   ########.fr       */
+/*   Updated: 2022/04/01 00:33:13 by ebouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static	void	check_wall(char *line)
 	while (line[i])
 	{
 		if (line[i] != '1')
-			print("Error\nInvalid Wall de Map!2\n");
+			print("Error\nInvalid Wall de Map!\n");
 		i++;
 	}
 }
